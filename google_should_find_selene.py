@@ -2,10 +2,8 @@ import pytest
 from selene import browser, be, have
 
 @pytest.fixture()
-def size_browser():
-    browser.driver.set_window_size(1920, 1500)
-@pytest.fixture()
 def open_browser():
+    browser.driver.set_window_size(1920, 1500)
     browser.open('https://google.com')
 
 def test_search(size_browser, open_browser):
